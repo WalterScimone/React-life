@@ -1,25 +1,25 @@
 import React from 'react';
 
-const categories = [
-    {
-        name: "commercial",
-        description:
-            "Photos of grocery stores, food trucks, and other commercial projects",
-    },
-    { name: "portraits", description: "Portraits of people in my life" },
-    { name: "food", description: "Delicious delicacies" },
-    {
-        name: "landscape",
-        description: "Fields, farmhouses, waterfalls, and the beauty of nature",
-    },
-];
-
-function categorySelected(name) {
-    console.log(`${name} clicked`)
-}
-
-
 function Nav() {
+    const categories = [
+        {
+            name: "This can be about many things...",
+            description:
+                "Photos of grocery stores, food trucks, and other commercial projects",
+        },
+        { name: "portraits", description: "Portraits of people in my life" },
+        { name: "Contact", description: "my contact lol" },
+        { name: "food", description: "Delicious delicacies" },
+        {
+            name: "landscape",
+            description: "Fields, farmhouses, waterfalls, and the beauty of nature",
+        },
+    ];
+
+    function categorySelected(name) {
+        console.log(`${name} clicked`)
+    }
+    
     return (
         <header>
             <h2>
@@ -31,11 +31,11 @@ function Nav() {
                 <ul className="flex-row">
                     <li className="mx-2">
                         <a href="#about">
-                            About me
+                            About us
         </a>
                     </li>
                     <li>
-                        <span>Contact</span>
+                        <span>Contact us</span>
                     </li>
                     {categories.map((category) => (
                         <li
